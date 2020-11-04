@@ -1,38 +1,153 @@
-.App {
-  text-align: center;
+/* COMMUN */
+body {
+  margin: 0;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.page {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* HEADER */
+header {
+  background-color: #263438;
+}
+header .wrapper div {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+h3 {
+  font-size: 24px;
+  margin-right: 20px;
+  font-family: "Grandstander", cursive;
+}
+.logo {
+  height: 60px;
+  object-fit: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Accounts */
+.accounts {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  /* overflow: hidden; */
+  /* overflow-y: auto; */
+  margin: 20px 0;
+}
+.accounts .wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: space-between;
+  /* overflow: hidden;
+  overflow-y: scroll; */
+}
+.account {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+h2 {
+  font-size: 24px;
+  margin-right: 20px;
+  font-weight: 700;
+  font-family: "Grandstander", cursive;
+}
+.account-band {
+  width: 96%;
+  height: 40px;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.operation {
+  width: 95%;
+  min-height: 30px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-betweenf;
+  align-items: center;
+  border: 2px solid #cec4c4;
+}
+.operation span {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 20px;
+  /* border: 2px solid black; */
+}
+.operation span:first-child {
+  font-size: 16px;
+  font-weight: 300;
+  width: 60px;
+  text-align: left;
+}
+.operation span:nth-child(2) {
+  flex: 1;
+}
+.operation span:last-child {
+  width: 80px;
+  text-align: right;
+}
+.account button {
+  height: 30px;
+  margin-top: 10px;
+  margin-right: 2%;
+  background-color: white;
+  border-radius: 10px;
+  border-color: #cec4c4;
+  border-style: solid;
+  outline: none;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  background-color: #798a8f;
+  color: white;
+}
+footer .wrapper div {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer strong {
+  font-weight: 900;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    width: 80%;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (max-width: 768px) {
+  .wrapper {
+    width: 90%;
+  }
+  .logo {
+    height: 50px;
   }
 }

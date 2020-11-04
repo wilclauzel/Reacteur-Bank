@@ -3,10 +3,16 @@ import Operation from "./Operation";
 import Button from "./Button";
 
 const Account = ({ account }) => {
-  const bandStyle = { backgroundColor: account.color };
   return (
     <div className="account">
-      <div className="account-band" style={bandStyle}>
+      <div
+        className="account-band"
+        style={
+          account.color
+            ? { backgroundColor: account.color }
+            : { backgroundColor: "grey" }
+        }
+      >
         <h2>{account.name}</h2>
         <h2>{account.balance} €</h2>
       </div>

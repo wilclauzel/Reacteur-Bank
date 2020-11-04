@@ -2,7 +2,6 @@ import React from "react";
 import Account from "./Account";
 
 const Accounts = ({ accounts }) => {
-  console.log(accounts);
   return (
     <div className="accounts">
       <div className="wrapper">
